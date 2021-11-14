@@ -1,0 +1,9 @@
+@import "../../../../assets/style/common";
+:host {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  select {
+    @include inputs;
+  }
+}

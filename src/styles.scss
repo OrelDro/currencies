@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+:root {
+  --primary-color: #2b8de4;
+  --secondary-color: #2b8d99;
+  --white: #ffffff;
+  --error-msg-color: #cb2525
+}

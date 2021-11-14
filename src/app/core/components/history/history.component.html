@@ -1,0 +1,7 @@
+<div class="history">
+  <span class="title">History</span>
+  <div class="history-row" *ngFor="let history of currencyHistory$ | async; let idx = index">
+    <span>{{idx}}.</span>
+    <span>{{history.amount | currency: history.from}} = {{history.conversion | currency: history.to}}</span>
+  </div>
+</div>

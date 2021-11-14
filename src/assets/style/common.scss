@@ -1,0 +1,9 @@
+@mixin inputs {
+  padding: 5px 10px;
+  border: 3px solid var(--primary-color);
+  border-radius: 15px;
+  outline: none;
+  &:focus {
+    border-color: var(--secondary-color);
+  }
+}

@@ -1,0 +1,17 @@
+<div class="currency-converter">
+  <span class="title">Currency Converter</span>
+  <form [formGroup]="currencyForm" class="actions">
+    <input type="number" formControlName="amount"/>
+    <app-dropdown formControlName="from" [label]="'From:'" [options]="currencies$ | async"></app-dropdown>
+    <app-dropdown formControlName="to" [label]="'To:'" [options]="currencies$ | async"></app-dropdown>
+  </form>
+  <span class="error-message" *ngIf="from?.value && to?.value && currencyForm.hasError('sameCurrency')">*can't convert same currency</span>
+  <span class="error-message" *ngIf="from?.dirty && to?.dirty && amount?.dirty &&
+  (from?.hasError('required') ||
+  to?.hasError('required') ||
+  amount?.hasError('required'))">*all fields are required</span>
+  <span class="error-message" *ngIf="amount?.dirty && amount?.hasError('min')">*amount must be greater than 0</span>
+  <span class="conversion-value" *ngIf="currencyForm.valid && conversionValue">
+    {{amount?.value | currency: from?.value}} = {{conversionValue | currency: to?.value}}
+  </span>
+</div>

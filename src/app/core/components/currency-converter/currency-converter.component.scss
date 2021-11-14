@@ -1,0 +1,35 @@
+@import "../../../../assets/style/common";
+:host {
+  display: block;
+  padding: 30px;
+  .currency-converter {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border: 3px dashed var(--primary-color);
+    .title {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      input[type="number"] {
+        @include inputs;
+      }
+    }
+    .error-message {
+      color: var(--error-msg-color);
+      font-size: 12px;
+    }
+    .conversion-value {
+      color: var(--primary-color);
+      font-weight: bold;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+:host {
+  display: block;
+  .header {
+    display: flex;
+    align-items: center;
+    background-color: var(--primary-color);
+    .route {
+      padding: 10px;
+      color: var(--white);
+      text-decoration: none;
+      &:hover, &.active-link {
+        background-color: var(--secondary-color);
+      }
+    }
+  }
+}
